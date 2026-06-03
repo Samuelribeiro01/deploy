@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             ['nome' => 'Cold Brew Nitro',   'descricao' => '18h de extração a frio com gás nitrogênio.',                       'preco' => 19.90, 'categoria' => 'cold_brew',  'imagem_url' => 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=600', 'disponivel' => true],
             ['nome' => 'Latte Macchiato',   'descricao' => 'Camadas de leite vaporizado e espresso. Visual impecável.',        'preco' => 16.90, 'categoria' => 'cappuccino', 'imagem_url' => null, 'disponivel' => true],
             ['nome' => 'Croissant Integral','descricao' => 'Crocante por fora, macio por dentro. Par perfeito com o café.',    'preco' => 12.00, 'categoria' => 'lanche',     'imagem_url' => null, 'disponivel' => true],
-            ['nome' => 'Chá Verde Gelado',  'descricao' => 'Refrescante e cheio de antioxidantes para manter o foco.',        'preco' => 11.00, 'categoria' => 'cha',        'imagem_url' => null, 'disponivel' => false],
+            ['nome' => 'Chá Verde Gelado',  'descricao' => 'Refrescante e cheio de antioxidantes para manter o foco.',        'preco' => 11.00, 'categoria' => 'outro',        'imagem_url' => null, 'disponivel' => false],
         ];
 
         foreach ($produtos as $p) {
