@@ -17,6 +17,13 @@ COPY . .
 # Instalar dependências PHP
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
+# Criar pastas necessárias para o Laravel
+RUN mkdir -p storage/framework/views \
+    storage/framework/cache \
+    storage/framework/sessions \
+    storage/logs \
+    bootstrap/cache
+
 # Permissões de storage
 RUN chmod -R 775 storage bootstrap/cache
 
@@ -26,7 +33,6 @@ EXPOSE 8000
 # Script de inicialização
 CMD php artisan config:cache && \
     php artisan route:cache && \
-    php artisan view:cache && \
     php artisan migrate --force && \
     php artisan db:seed --force && \
     php artisan serve --host=0.0.0.0 --port=8000
